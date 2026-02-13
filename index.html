@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AS AARI WORK CREATION | Premium Handcrafted Embroidery</title>
+    <meta name="description" content="Premium handcrafted aari embroidery in Siralgaon, Maharashtra. Bridal blouses, maggam work, stone work. Available 24/7. WhatsApp: +91 92092 33452">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Poppins:wght@300;400;500;600;700&family=Italiana&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #8B0000;
+            --gold: #FFD700;
+            --dark: #1a0a0a;
+            --cream: #FFF5E6;
+            --rose: #FF1744;
+            --burgundy: #4A0E0E;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #0a0a0a;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        .bg-animation {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a0a0a 50%, #2a0a0a 100%);
+        }
+
+        .bg-animation::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,215,0,0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: moveStars 20s linear infinite;
+        }
+
+        @keyframes moveStars {
+            from { transform: translate(0, 0); }
+            to { transform: translate(-50px, -50px); }
+        }
+
+        nav {
+            position: fixed;
+            width: 100%;
+            padding: 1.5rem 5%;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 2px solid var(--gold);
+            z-index: 1000;
+            animation: slideDown 0.6s ease;
+        }
+
+        @keyframes slideDown {
+            from { transform: translateY(-100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Cinzel', serif;
+            font-size: 2rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--gold), var(--rose));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 3rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--rose);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 8rem 5% 4rem;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(255,215,0,0.2), transparent);
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: pulse 4s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.3; }
+            50% { transform: translate(-50%, -50%) scale(1.2); opacity: 0.1; }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 1000px;
+        }
+
+        .hero h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 6rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--rose) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease 0.2s both;
+            line-height: 1.2;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero .tagline {
+            font-family: 'Italiana', serif;
+            font-size: 2.5rem;
+            color: var(--gold);
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease 0.4s both;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            color: rgba(255,255,255,0.8);
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            line-height: 1.8;
+            animation: fadeInUp 1s ease 0.6s both;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            animation: fadeInUp 1s ease 0.8s both;
+        }
+
+        .btn {
+            padding: 1.3rem 3.5rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: all 0.4s;
+            text-decoration: none;
+            border-radius: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--gold), var(--rose));
+            color: #000;
+            box-shadow: 0 10px 40px rgba(255, 215, 0, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 20px 60px rgba(255, 215, 0, 0.6);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--gold);
+            border: 3px solid var(--gold);
+        }
+
+        .btn-secondary:hover {
+            background: var(--gold);
+            color: #000;
+            transform: translateY(-5px);
+        }
+
+        section {
+            padding: 6rem 5%;
+            position: relative;
+            scroll-margin-top: 80px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+
+        .section-header h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 4.5rem;
+            background: linear-gradient(135deg, var(--gold), var(--rose));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+            font-weight: 900;
+        }
+
+        .section-header .line {
+            width: 150px;
+            height: 4px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            margin: 0 auto;
+        }
+
+        .services {
+            background: linear-gradient(180deg, rgba(26,10,10,0.5) 0%, rgba(10,10,10,0.8) 100%);
+        }
+
+        .services-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .service-card {
+            background: linear-gradient(135deg, rgba(139,0,0,0.2), rgba(74,14,14,0.3));
+            border: 2px solid rgba(255,215,0,0.3);
+            border-radius: 20px;
+            padding: 3rem;
+            transition: all 0.4s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,215,0,0.1), transparent);
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+
+        .service-card:hover::before {
+            opacity: 1;
+        }
+
+        .service-card:hover {
+            transform: translateY(-15px);
+            border-color: var(--gold);
+            box-shadow: 0 20px 60px rgba(255,215,0,0.3);
+        }
+
+        .service-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+            filter: drop-shadow(0 0 20px rgba(255,215,0,0.5));
+        }
+
+        .service-card h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.8rem;
+            color: var(--gold);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .service-card p {
+            color: rgba(255,255,255,0.8);
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .gallery {
+            background: linear-gradient(180deg, rgba(10,10,10,0.8) 0%, rgba(26,10,10,0.5) 100%);
+        }
+
+        .gallery-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .gallery-item {
+            aspect-ratio: 1;
+            background: linear-gradient(135deg, var(--primary), var(--burgundy));
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            border: 3px solid rgba(255,215,0,0.2);
+            transition: all 0.4s;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s;
+        }
+
+        .gallery-item::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+            z-index: 1;
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+
+        .gallery-item:hover::before {
+            opacity: 1;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+            border-color: var(--gold);
+            box-shadow: 0 20px 60px rgba(255,215,0,0.4);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.95), transparent);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 2rem;
+            opacity: 0;
+            transition: opacity 0.4s;
+            z-index: 2;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-overlay h4 {
+            font-family: 'Cinzel', serif;
+            color: var(--gold);
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .gallery-overlay p {
+            color: rgba(255,255,255,0.9);
+        }
+
+        .about {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--burgundy) 100%);
+            position: relative;
+        }
+
+        .about::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(255,215,0,0.1), transparent),
+                radial-gradient(circle at 80% 50%, rgba(255,23,68,0.1), transparent);
+        }
+
+        .about-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .stat-item {
+            background: rgba(0,0,0,0.3);
+            border: 2px solid rgba(255,215,0,0.3);
+            border-radius: 20px;
+            padding: 2.5rem;
+            transition: all 0.4s;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-10px);
+            border-color: var(--gold);
+            background: rgba(0,0,0,0.5);
+        }
+
+        .stat-number {
+            font-family: 'Cinzel', serif;
+            font-size: 4rem;
+            color: var(--gold);
+            font-weight: 900;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1.2rem;
+            color: rgba(255,255,255,0.9);
+        }
+
+        .contact {
+            background: linear-gradient(180deg, rgba(26,10,10,0.5) 0%, rgba(10,10,10,0.9) 100%);
+        }
+
+        .contact-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+        }
+
+        .contact-info h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 3rem;
+            color: var(--gold);
+            margin-bottom: 2rem;
+        }
+
+        .contact-info p {
+            font-size: 1.2rem;
+            color: rgba(255,255,255,0.8);
+            line-height: 1.8;
+            margin-bottom: 3rem;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            background: rgba(139,0,0,0.2);
+            padding: 1.5rem;
+            border-radius: 15px;
+            border: 2px solid rgba(255,215,0,0.2);
+            transition: all 0.3s;
+        }
+
+        .contact-item:hover {
+            border-color: var(--gold);
+            transform: translateX(10px);
+        }
+
+        .contact-icon {
+            font-size: 2.5rem;
+            filter: drop-shadow(0 0 10px rgba(255,215,0,0.5));
+        }
+
+        .contact-text h4 {
+            color: var(--gold);
+            font-size: 1.3rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .contact-text p,
+        .contact-text a {
+            color: rgba(255,255,255,0.8);
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-text a:hover {
+            color: var(--gold);
+        }
+
+        .contact-form {
+            background: linear-gradient(135deg, rgba(139,0,0,0.3), rgba(74,14,14,0.4));
+            padding: 3rem;
+            border-radius: 20px;
+            border: 2px solid rgba(255,215,0,0.3);
+        }
+
+        .form-group {
+            margin-bottom: 2rem;
+        }
+
+        .form-group label {
+            display: block;
+            color: var(--gold);
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1.2rem;
+            background: rgba(0,0,0,0.5);
+            border: 2px solid rgba(255,215,0,0.3);
+            border-radius: 10px;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--gold);
+            background: rgba(0,0,0,0.7);
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        footer {
+            background: #000;
+            padding: 4rem 5% 2rem;
+            border-top: 2px solid var(--gold);
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h3 {
+            font-family: 'Cinzel', serif;
+            color: var(--gold);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            line-height: 2;
+            display: block;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: var(--gold);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(255,215,0,0.1);
+            border: 2px solid rgba(255,215,0,0.3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            transition: all 0.3s;
+        }
+
+        .social-icon:hover {
+            background: var(--gold);
+            border-color: var(--gold);
+            transform: translateY(-5px) rotate(10deg);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,215,0,0.2);
+            color: rgba(255,255,255,0.6);
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .menu-toggle span {
+            width: 30px;
+            height: 3px;
+            background: var(--gold);
+            transition: all 0.3s;
+        }
+
+        @media (max-width: 1024px) {
+            .hero h1 { font-size: 4rem; }
+            .section-header h2 { font-size: 3rem; }
+            .contact-grid { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 3rem; }
+            .hero .tagline { font-size: 1.8rem; }
+            .nav-links { display: none; }
+            .menu-toggle { display: flex; }
+            .cta-buttons { flex-direction: column; }
+            .services-grid,
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-animation"></div>
+
+    <nav>
+        <div class="nav-container">
+            <div class="logo">AS AARI WORK</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>AARI WORK CREATION</h1>
+            <p class="tagline">Where Threads Weave Dreams</p>
+            <p>Experience the finest handcrafted aari embroidery. Each stitch tells a story of tradition, passion, and artistry. From bridal masterpieces to elegant everyday wear - we create magic with threads.</p>
+            <div class="cta-buttons">
+                <a href="https://wa.me/919130777520" class="btn btn-primary">Order Now on WhatsApp</a>
+                <a href="#gallery" class="btn btn-secondary">View Gallery</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="section-header">
+            <h2>Our Services</h2>
+            <div class="line"></div>
+        </div>
+        <div class="services-grid">
+            <div class="service-card fade-in">
+                <div class="service-icon">👰</div>
+                <h3>Bridal Blouse Design</h3>
+                <p>Exquisite bridal blouses with heavy aari work, kundan, pearls, stones, and zardozi. Your dream wedding blouse awaits.</p>
+            </div>
+            <div class="service-card fade-in">
+                <div class="service-icon">🧵</div>
+                <h3>Aari Embroidery</h3>
+                <p>Traditional aari work with intricate patterns - floral, peacock, paisley designs in gold, silver, and colored threads.</p>
+            </div>
+            <div class="service-card fade-in">
+                <div class="service-icon">✨</div>
+                <h3>Maggam Work</h3>
+                <p>South Indian maggam work specializing in thread work, stone work, kundan, and zardozi for bridal and party wear.</p>
+            </div>
+            <div class="service-card fade-in">
+                <div class="service-icon">💎</div>
+                <h3>Stone & Bead Work</h3>
+                <p>Hand-stitched stone work, sequins, beads, and mirror work to add glamour to your outfits.</p>
+            </div>
+            <div class="service-card fade-in">
+                <div class="service-icon">🌸</div>
+                <h3>Saree Work</h3>
+                <p>Beautiful borders, pallu designs, and all-over aari work to transform your plain sarees into masterpieces.</p>
+            </div>
+            <div class="service-card fade-in">
+                <div class="service-icon">👗</div>
+                <h3>Lehenga Design</h3>
+                <p>Custom aari work on lehengas, blouses, and dupattas for weddings and special occasions.</p>
+            </div>
+            <div class="service-card fade-in">
+                <div class="service-icon">🎨</div>
+                <h3>Kurti & Suit Work</h3>
+                <p>Customize kurtis and salwar suits with neck designs, sleeve work, and all-over patterns.</p>
+            </div>
+            <div class="service-card fade-in">
+                <div class="service-icon">⚡</div>
+                <h3>Express Service</h3>
+                <p>Available 24/7 for urgent orders! Quick turnaround for last-minute events. Contact anytime on WhatsApp.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery" id="gallery">
+        <div class="section-header">
+            <h2>Our Masterpieces</h2>
+            <div class="line"></div>
+        </div>
+        <div class="gallery-grid">
+            <!-- Gallery Item 1 -->
+            <div class="gallery-item fade-in">
+                <img src="images/gallery-1.jpg" alt="Green blouse with gold lattice aari work" loading="lazy">
+                <div class="gallery-overlay">
+                    <h4>Elegant Green Blouse</h4>
+                    <p>Gold thread aari work with diamond lattice pattern</p>
+                </div>
+            </div>
+
+            <!-- Gallery Item 2 -->
+            <div class="gallery-item fade-in">
+                <img src="images/gallery-2.jpg" alt="Purple blouse with gold border" loading="lazy">
+                <div class="gallery-overlay">
+                    <h4>Royal Purple Design</h4>
+                    <p>Intricate gold border with floral embroidery</p>
+                </div>
+            </div>
+
+            <!-- Gallery Item 3 -->
+            <div class="gallery-item fade-in">
+                <img src="images/gallery-3.jpg" alt="Red bridal blouse complete set" loading="lazy">
+                <div class="gallery-overlay">
+                    <h4>Heavy Bridal Blouse</h4>
+                    <p>Complete red bridal set with zardozi and stone work</p>
+                </div>
+            </div>
+
+            <!-- Gallery Item 4 -->
+            <div class="gallery-item fade-in">
+                <img src="images/gallery-4.jpg" alt="Red with floral vine design" loading="lazy">
+                <div class="gallery-overlay">
+                    <h4>Floral Elegance</h4>
+                    <p>Delicate vine pattern with white floral accents</p>
+                </div>
+            </div>
+
+            <!-- Gallery Item 5 -->
+            <div class="gallery-item fade-in">
+                <img src="images/gallery-5.jpg" alt="Pink silk blouse" loading="lazy">
+                <div class="gallery-overlay">
+                    <h4>Pink Silk Special</h4>
+                    <p>Simple pearl border with elegant neckline</p>
+                </div>
+            </div>
+
+            <!-- Gallery Item 6 -->
+            <div class="gallery-item fade-in">
+                <img src="images/gallery-6.jpg" alt="Purple with pearl border" loading="lazy">
+                <div class="gallery-overlay">
+                    <h4>Purple Pearl Work</h4>
+                    <p>Gold thread border with scattered pearl embellishments</p>
+                </div>
+            </div>
+
+            <!-- Gallery Item 7 -->
+            <div class="gallery-item fade-in">
+                <img src="images/gallery-7.jpg" alt="Lavender blouse with paisley" loading="lazy">
+                <div class="gallery-overlay">
+                    <h4>Lavender Paisley</h4>
+                    <p>Traditional paisley border with pearl detailing</p>
+                </div>
+            </div>
+
+            <!-- Gallery Item 8 -->
+            <div class="gallery-item fade-in">
+                <img src="images/gallery-8.jpg" alt="Sage green with pearls" loading="lazy">
+                <div class="gallery-overlay">
+                    <h4>Sage Green Beauty</h4>
+                    <p>Rose gold thread work with white pearl accents</p>
+                </div>
+            </div>
+
+            <!-- Gallery Item 9 -->
+            <div class="gallery-item fade-in">
+                <img src="images/gallery-9.jpg" alt="Teal blouse" loading="lazy">
+                <div class="gallery-overlay">
+                    <h4>Teal Treasure</h4>
+                    <p>Gold thread neckline with scattered embellishments</p>
+                </div>
+            </div>
+
+            <!-- Gallery Item 10 -->
+            <div class="gallery-item fade-in">
+                <img src="images/gallery-10.jpg" alt="Turquoise with floral vine" loading="lazy">
+                <div class="gallery-overlay">
+                    <h4>Turquoise Vine Design</h4>
+                    <p>Intricate gold vine pattern with leaf motifs</p>
+                </div>
+            </div>
+
+            <!-- Gallery Item 11 -->
+            <div class="gallery-item fade-in">
+                <img src="images/gallery-11.jpg" alt="White silk blouse" loading="lazy">
+                <div class="gallery-overlay">
+                    <h4>Classic White Elegance</h4>
+                    <p>Rose gold border on pure silk</p>
+                </div>
+            </div>
+
+            <!-- Gallery Item 12 -->
+            <div class="gallery-item fade-in">
+                <img src="images/gallery-12.jpg" alt="Teal with pearl dangles" loading="lazy">
+                <div class="gallery-overlay">
+                    <h4>Teal Pearl Special</h4>
+                    <p>Gold thread with delicate pearl hanging details</p>
+                </div>
+            </div>
+
+            <!-- Gallery Item 13 -->
+            <div class="gallery-item fade-in">
+                <img src="images/gallery-13.jpg" alt="Red silk with border" loading="lazy">
+                <div class="gallery-overlay">
+                    <h4>Red Silk Masterpiece</h4>
+                    <p>Traditional gold border on rich red silk</p>
+                </div>
+            </div>
+
+            <!-- Gallery Item 14 -->
+            <div class="gallery-item fade-in">
+                <img src="images/gallery-14.jpg" alt="Welcome embroidery hoop" loading="lazy">
+                <div class="gallery-overlay">
+                    <h4>Custom Embroidery</h4>
+                    <p>Welcome home baby - personalized designs</p>
+                </div>
+            </div>
+
+            <!-- Gallery Item 15 -->
+            <div class="gallery-item fade-in">
+                <img src="images/gallery-15.jpg" alt="Floral embroidery on white" loading="lazy">
+                <div class="gallery-overlay">
+                    <h4>Delicate Florals</h4>
+                    <p>Hand-embroidered flowers on fine fabric</p>
+                </div>
+            </div>
+
+            <!-- Gallery Item 16 -->
+            <div class="gallery-item fade-in">
+                <img src="images/gallery-16.jpg" alt="Couple bears embroidery" loading="lazy">
+                <div class="gallery-overlay">
+                    <h4>Custom Character Work</h4>
+                    <p>Personalized embroidery with date</p>
+                </div>
+            </div>
+
+            <!-- Gallery Item 17 -->
+            <div class="gallery-item fade-in">
+                <img src="images/gallery-17.jpg" alt="Krishna flute embroidery" loading="lazy">
+                <div class="gallery-overlay">
+                    <h4>Spiritual Embroidery</h4>
+                    <p>Traditional motifs - peacock feather and flute</p>
+                </div>
+            </div>
+
+            <!-- Gallery Item 18 -->
+            <div class="gallery-item fade-in">
+                <img src="images/gallery-18.jpg" alt="Personalized name embroidery" loading="lazy">
+                <div class="gallery-overlay">
+                    <h4>Custom Name Work</h4>
+                    <p>Personalized character embroidery</p>
+                </div>
+            </div>
+
+            <!-- Gallery Item 19 - NEW -->
+            <div class="gallery-item fade-in">
+                <img src="images/gallery-19.jpg" alt="Yellow blouse with pink lotus sleeves" loading="lazy">
+                <div class="gallery-overlay">
+                    <h4>Yellow Lotus Blouse</h4>
+                    <p>Pink lotus embroidery with purple bead tassels</p>
+                </div>
+            </div>
+
+            <!-- Gallery Item 20 - NEW -->
+            <div class="gallery-item fade-in">
+                <img src="images/gallery-20.jpg" alt="White blouse with Maharashtrian folk art" loading="lazy">
+                <div class="gallery-overlay">
+                    <h4>Maharashtrian Folk Art</h4>
+                    <p>Traditional characters on white blouse</p>
+                </div>
+            </div>
+
+            <!-- Gallery Item 21 - NEW -->
+            <div class="gallery-item fade-in">
+                <img src="images/gallery-21.jpg" alt="Ganesh Ganesha embroidery" loading="lazy">
+                <div class="gallery-overlay">
+                    <h4>Divine Ganesh Design</h4>
+                    <p>Colorful hibiscus with Ganesh motif</p>
+                </div>
+            </div>
+
+            <!-- Gallery Item 22 - NEW -->
+            <div class="gallery-item fade-in">
+                <img src="images/gallery-22.jpg" alt="Teal blue peacock stone work sleeves" loading="lazy">
+                <div class="gallery-overlay">
+                    <h4>Peacock Stone Work</h4>
+                    <p>Teal blue with pink stone peacock design</p>
+                </div>
+            </div>
+
+            <!-- Gallery Item 23 - NEW -->
+            <div class="gallery-item fade-in">
+                <img src="images/gallery-23.jpg" alt="Red crescent moon pattern sleeves" loading="lazy">
+                <div class="gallery-overlay">
+                    <h4>Red Crescent Moon</h4>
+                    <p>Gold crescent pattern with mirror work</p>
+                </div>
+            </div>
+
+            <!-- Gallery Item 24 - NEW -->
+            <div class="gallery-item fade-in">
+                <img src="images/gallery-24.jpg" alt="Pink stone work blouse" loading="lazy">
+                <div class="gallery-overlay">
+                    <h4>Pink Stone Elegance</h4>
+                    <p>Heavy stone work with gold border</p>
+                </div>
+            </div>
+
+            <!-- Gallery Item 25 - NEW -->
+            <div class="gallery-item fade-in">
+                <img src="images/gallery-25.jpg" alt="Purple blouse with Warli art" loading="lazy">
+                <div class="gallery-overlay">
+                    <h4>Purple Warli Art</h4>
+                    <p>Traditional Warli figures in pearl work</p>
+                </div>
+            </div>
+
+            <!-- Gallery Item 26 - NEW -->
+            <div class="gallery-item fade-in">
+                <img src="images/gallery-26.jpg" alt="Green silk sleeves with gold border" loading="lazy">
+                <div class="gallery-overlay">
+                    <h4>Green Silk Royalty</h4>
+                    <p>Rich green silk with pearl tassel border</p>
+                </div>
+            </div>
+
+            <!-- Gallery Item 27 - NEW -->
+            <div class="gallery-item fade-in">
+                <img src="images/gallery-27.jpg" alt="Red net blouse with gold embroidery" loading="lazy">
+                <div class="gallery-overlay">
+                    <h4>Red Net Special</h4>
+                    <p>Gold embroidery on red net fabric</p>
+                </div>
+            </div>
+
+            <!-- Gallery Item 28 - NEW -->
+            <div class="gallery-item fade-in">
+                <img src="images/gallery-28.jpg" alt="Pink Vithoba Rakhumai embroidery" loading="lazy">
+                <div class="gallery-overlay">
+                    <h4>Vithoba Rakhumai</h4>
+                    <p>Traditional deity embroidery with pearl work</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="section-header">
+            <h2>Our Story</h2>
+            <div class="line"></div>
+        </div>
+        <div class="about-content">
+            <p>AS AARI WORK CREATION celebrates the timeless art of Indian embroidery. With 2 years of passionate dedication, we've been creating beautiful memories for our valued customers.</p>
+            <p>Every piece we create is handcrafted with precision, love, and attention to detail. From traditional bridal wear to contemporary designs, we bring your vision to life with threads of gold and dreams.</p>
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Happy Customers</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">2+</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Handcrafted</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Available</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="section-header">
+            <h2>Get In Touch</h2>
+            <div class="line"></div>
+        </div>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h3>Let's Create Magic Together</h3>
+                <p>Have a design in mind? Want to customize your outfit? We're available anytime to bring your vision to life!</p>
+                
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <div class="contact-icon">📱</div>
+                        <div class="contact-text">
+                            <h4>Phone / WhatsApp</h4>
+                            <p><a href="tel:+919130777520">+91 91307 77520</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div class="contact-text">
+                            <h4>Email</h4>
+                            <p><a href="mailto:as9101creation@gmail.com">as9101creation@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-text">
+                            <h4>Location</h4>
+                            <p>Siralgaon, Maharashtra, India</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">⏰</div>
+                        <div class="contact-text">
+                            <h4>Working Hours</h4>
+                            <p>Available Anytime - 24/7</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <form onsubmit="handleSubmit(event)">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>AS AARI WORK CREATION</h3>
+                <p>Handcrafted embroidery excellence. Creating masterpieces with threads of tradition and passion.</p>
+                <div class="social-links">
+                    <a href="https://instagram.com/as_aari_work_boutique" class="social-icon" target="_blank">📷</a>
+                    <a href="https://wa.me/919130777520" class="social-icon" target="_blank">💬</a>
+                    <a href="https://facebook.com" class="social-icon" target="_blank">👥</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="#home">Home</a>
+                <a href="#services">Services</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-section">
+                <h3>Our Services</h3>
+                <a href="#services">Bridal Blouse</a>
+                <a href="#services">Aari Embroidery</a>
+                <a href="#services">Maggam Work</a>
+                <a href="#services">Stone & Bead Work</a>
+                <a href="#services">Express Service</a>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>📱 +91 91307 77520</p>
+                <p>✉️ as9101creation@gmail.com</p>
+                <p>📍 Siralgaon, Maharashtra</p>
+                <p>⏰ Available 24/7</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 AS AARI WORK CREATION. All Rights Reserved. | Crafted with ❤️</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        }
+
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        function handleSubmit(event) {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            const name = formData.get('name');
+            const phone = formData.get('phone');
+            const message = formData.get('message');
+            
+            const whatsappMessage = `Hello! I'm ${name}. ${message}. Please contact me at ${phone}.`;
+            const whatsappURL = `https://wa.me/919130777520?text=${encodeURIComponent(whatsappMessage)}`;
+            
+            window.open(whatsappURL, '_blank');
+            event.target.reset();
+            alert('Thank you! Redirecting to WhatsApp...');
+        }
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
